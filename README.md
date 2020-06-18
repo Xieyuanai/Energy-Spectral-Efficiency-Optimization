@@ -8,4 +8,4 @@ Y. Xie, Z. Liu, and  K. Y. Chan "Energy-Spectral Efficiency Optimization in Vehi
 
 ●Other figures in the paper shall be easy to reproduce with the provided function files.
 
-●If you have any questions, please do not hesitate to contact me/xieyuan_ai@163.com.
+If you have any questions, please do not hesitate to contact me/xieyuan_ai@163.com.
