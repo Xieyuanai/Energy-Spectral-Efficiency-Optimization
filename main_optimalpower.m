@@ -6,8 +6,8 @@ clear
 % are only one active CM transmitter to communicate with their CH receiver in each cluster. 
 %----------------------------System parameter------------------------------%
 
-V1=[36,30,38,40,30];% The speed vector of active CM transmitters in all clusters.
-V2=[30,37,32,36,39];% The speed vector of CH receivers in all clusters.
+V1=[26,20,28,30,20];% The speed vector of active CM transmitters in all clusters.
+V2=[20,27,22,26,29];% The speed vector of CH receivers in all clusters.
 v=zeros(5,5);% Initialize the relative velocity matrix between vehicles.
 h=zeros(5,5);% Initialize the mobile links’channel fast fading component in  previous time.
 G=zeros(5,5);% Initialize average channel gain matrix between vehicles.
