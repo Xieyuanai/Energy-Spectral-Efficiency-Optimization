@@ -8,10 +8,10 @@ clear
 %----------------------------System parameter------------------------------%
   L=zeros(5,5);
 for F=1:6
-V1=28*ones(1,5)+2*F*ones(1,5);%The speed vector of active CM transmitters in all clusters
-V2=[30,30,30,30,30];%The speed vector of CH receivers in all clusters.
+V1=18*ones(1,5)+2*F*ones(1,5);%The speed vector of active CM transmitters in all clusters
+V2=[20,20,20,20,20];%The speed vector of CH receivers in all clusters.
 v=zeros(5,5);%Initialize the relative velocity matrix between vehicles.
-h=zeros(5,5);%Initialize the mobile links¡¯channel fast fading component in  previous time.
+h=zeros(5,5);%Initialize the mobile linksÂ¡Â¯channel fast fading component in  previous time.
 G=zeros(5,5);%%Initialize average channel gain matrix between vehicles.
 I=zeros(5,5);% Initialize interference channel gain matrix between vehicles. 
 %(All diagonal elements are 0 elements, because diagonal elements are effective channel gains)
@@ -31,7 +31,7 @@ epsi=besselj(0,j1);%Calculate the value of Bessel function
 a=(epsi.^2).*h;% CSI feedback part in the fast fading model
 d=distance(5);%Relative distance matrix
 Shadow=[2.16,0.1,0.1,1.28,1.76;0.1,2.16,0.2,1,2;1,0.2,2.1,0.1,0.1;1.28,0.1,0.1,2.2,0.21;5.48,2.01,1.06,0.21,2.16];%
-%Shadow fading matrix£» The value of element is set as 0.1-10.
+%Shadow fading matrixÂ£Â» The value of element is set as 0.1-10.
 %The parameter selection principle is to keep the large-scale fading portion 
 %of the interference channel gain as consistent as possible, 
 %so that it is easy to make balanced interference management 
@@ -59,7 +59,7 @@ arfa=zeros(N,5);%Successive convex approximation coefficient matrix  X
 beta=zeros(N,5);%Successive convex approximation coefficient matrix  Y
 SINR=zeros(N,5);
 Pmax=log(0.5)*ones(N,5);
-B=1;%Spectrum bandwidth£¬also can be set as 1 or 0.001(GHz) which 
+B=1;%Spectrum bandwidthÂ£Â¬also can be set as 1 or 0.001(GHz) which 
 %affect the final energy efficiency convergence speed and precision. 
 C1=linspace(1,1,5);
 GF=linspace(1.5,1.5,5);%Power amplifier coefficient vector.
